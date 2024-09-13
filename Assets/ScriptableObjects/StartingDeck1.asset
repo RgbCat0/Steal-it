@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db600d9de072f9448b294c2a536f58c5, type: 3}
+  m_Name: StartingDeck1
+  m_EditorClassIdentifier: 
+  <Cards>k__BackingField:
+  - amount: 12
+    cardDef: {fileID: 11400000, guid: f92ffcb95ee303648a1e29b6e2016670, type: 2}
+  - amount: 10
+    cardDef: {fileID: 11400000, guid: 569c72793bc3b7a4382d8701083c67c7, type: 2}
+  - amount: 8
+    cardDef: {fileID: 11400000, guid: a0957fd2be935e34fab3b011134b6e5c, type: 2}
+  - amount: 5
+    cardDef: {fileID: 11400000, guid: eff230e390b38114890f77b478f59fbc, type: 2}
+  - amount: 2
+    cardDef: {fileID: 11400000, guid: 1ff831bbc3c397347a88a02d0342d775, type: 2}
+  - amount: 5
+    cardDef: {fileID: 11400000, guid: 87f5740c01a815f498bbe5d8cb53cacf, type: 2}
+  - amount: 3
+    cardDef: {fileID: 11400000, guid: bf17bd68114ff624ea23f1340245a3b8, type: 2}
+  - amount: 2
+    cardDef: {fileID: 11400000, guid: 81f6c64bbe3f8d44b9cad622d5d7ee82, type: 2}
+  - amount: 1
+    cardDef: {fileID: 11400000, guid: 30e6fb51d646f5f4f8bc4664acd0fcce, type: 2}
+  - amount: 2
+    cardDef: {fileID: 11400000, guid: a96d35eae62a9a14dbb026161366a8c0, type: 2}
+  - amount: 1
+    cardDef: {fileID: 11400000, guid: c1cf6d69cc7a9e24690df3254bb8ce91, type: 2}
+  - amount: 1
+    cardDef: {fileID: 11400000, guid: 95efba53960f3a645bf1b16fbb22eb33, type: 2}
+  - amount: 2
+    cardDef: {fileID: 11400000, guid: a93e8e2b8eb003c4bbe201635b4ecb43, type: 2}
+  - amount: 2
+    cardDef: {fileID: 11400000, guid: 521d9821be77c2640a716d3a9ae45dbb, type: 2}
+  - amount: 3
+    cardDef: {fileID: 11400000, guid: f5be2e531dfc51048b0448c4e2b4c0ba, type: 2}
