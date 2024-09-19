@@ -15,14 +15,12 @@ public class Player
     public void DrawRandomCard(int amount)
     {
         for (var i = 0; i < amount; i++)
-        {
             DrawRandomCard();
-        }
     }
 
     public void DrawRandomCard()
     {
-        int failSafe = 0;
+        var failSafe = 0;
         while (true)
         {
             failSafe++;
@@ -53,7 +51,7 @@ public class Player
         var card = GameManager.Main.gameDeck[Random.Range(0, GameManager.Main.gameDeck.Count)];
         if (card.amount <= 0)
         {
-            // GameManager.Main.gameDeck.Remove(card);
+            GameManager.Main.gameDeck.Remove(card);
             return Check.GameOutOfCardsSingleType;
         }
 
@@ -65,6 +63,14 @@ public class Player
         return Check.Done;
     }
     #endregion
+
+    public void NextTurnCleanup()
+    {
+        if (hand.Count + handSpecial.Count <= GameManager.Main.minDeckSize)
+            DrawRandomCard(GameManager.Main.minDeckSize - hand.Count - handSpecial.Count);
+        CheckScore();
+        SortHand();
+    }
 
     public void CheckScore()
     {
@@ -84,14 +90,7 @@ public class Player
     }
 
     private void SortDefaultCards() // sorts by common to legendary
-        =>
-        hand.Sort(
-            (a, b) =>
-            {
-                var typeComparison = a.CardWorth.CompareTo(b.CardWorth);
-                return typeComparison;
-            }
-        );
+        => hand.Sort((a, b) => a.CardWorth.CompareTo(b.CardWorth));
 
     private void SortSpecialCards() // Sorts by name
         => handSpecial.Sort((a, b) => string.Compare(a.name, b.name, StringComparison.Ordinal));
@@ -125,7 +124,7 @@ public class Player
     {
         // steal 3 cards from another player's hand
         // choosing logic will be implemented later
-        GameManager.Main.players[GameManager.Main.currentPlayerIndex + 1].h
+        // GameManager.Main.players[GameManager.Main.currentPlayerIndex + 1].h
     }
 
     public void Bomb()
@@ -141,7 +140,6 @@ public class Player
     public void Draw4() => DrawRandomCard(4);
 
     public void Draw2() => DrawRandomCard(2);
-    
 
     public void Denied()
     {

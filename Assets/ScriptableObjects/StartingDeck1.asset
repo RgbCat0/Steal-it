@@ -34,9 +34,9 @@ MonoBehaviour:
   - amount: 2
     cardDef: {fileID: 11400000, guid: a96d35eae62a9a14dbb026161366a8c0, type: 2}
   - amount: 1
-    cardDef: {fileID: 11400000, guid: c1cf6d69cc7a9e24690df3254bb8ce91, type: 2}
-  - amount: 1
     cardDef: {fileID: 11400000, guid: 95efba53960f3a645bf1b16fbb22eb33, type: 2}
+  - amount: 1
+    cardDef: {fileID: 11400000, guid: c1cf6d69cc7a9e24690df3254bb8ce91, type: 2}
   - amount: 2
     cardDef: {fileID: 11400000, guid: a93e8e2b8eb003c4bbe201635b4ecb43, type: 2}
   - amount: 2
